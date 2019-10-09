@@ -1,27 +1,32 @@
-# BrasilprevTest
+# DESAFIO FRONT-END BRASILPREV
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.8.
+Criar um projeto em angular.
 
-## Development server
+## Objetivo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Consumir a API: https://randomuser.me/api/?results=50&nat=br,
 
-## Code scaffolding
+1ª pagima
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Exibir uma lista de todos usuários com nome e email, ordenada por nome.
 
-## Build
+2ª pagina
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Exibir o detalhe de usuário com foto, nome completo, endereço, telefone e data de nascimento.
 
-## Running unit tests
+## Instalação && Resultado
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone o projeto
+2. `yarn` ou `npm i`
+3. `ng serve` ou `yarn start` ou `npm start`
 
-## Running end-to-end tests
+## TODO
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- Testes
+- Paginação
+- Melhorar layout
+- Melhorar documentação
 
-## Further help
+## Considerações finais
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Feito em poucas horas, mas com carinho e atenção nos detalhes ❤️👍😴
