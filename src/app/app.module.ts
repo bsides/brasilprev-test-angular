@@ -9,8 +9,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { UsersComponent } from './users/users.component'
 import { UserDetailsComponent } from './user-details/user-details.component'
 
+import { MatCardModule } from '@angular/material/card'
+import { MatListModule } from '@angular/material/list'
 import { MatSortModule } from '@angular/material/sort'
 import { MatTableModule } from '@angular/material/table'
+
+import { LOCALE_ID } from '@angular/core'
+import { registerLocaleData } from '@angular/common'
+import localePt from '@angular/common/locales/pt'
+registerLocaleData(localePt)
 
 @NgModule({
   declarations: [AppComponent, UsersComponent, UserDetailsComponent],
@@ -19,10 +26,12 @@ import { MatTableModule } from '@angular/material/table'
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MatCardModule,
+    MatListModule,
     MatSortModule,
     MatTableModule
   ],
-  providers: [AppService],
+  providers: [AppService, { provide: LOCALE_ID, useValue: 'pt-BR' }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

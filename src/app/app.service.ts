@@ -29,7 +29,7 @@ export class AppService {
     )
   }
 
-  selectUser(user: UserDetail) {
+  selectUser(user: UserDetail | {}) {
     this.userSource.next(user)
   }
 

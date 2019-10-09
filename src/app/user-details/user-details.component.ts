@@ -16,7 +16,7 @@ export class UserDetailsComponent implements OnInit {
     this.data.selectedUser.subscribe(user => (this.userSelected = user))
   }
 
-  newMessage() {
-    // this.data.selectUser()
+  resetUser() {
+    this.data.selectUser({})
   }
 }
