@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { UsersComponent } from './users/users.component'
 import { UserDetailsComponent } from './user-details/user-details.component'
 
+import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
 import { MatListModule } from '@angular/material/list'
 import { MatSortModule } from '@angular/material/sort'
@@ -26,6 +27,7 @@ registerLocaleData(localePt)
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MatButtonModule,
     MatCardModule,
     MatListModule,
     MatSortModule,

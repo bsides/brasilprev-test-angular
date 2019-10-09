@@ -1,55 +1,9 @@
-<!-- <div *ngIf="userSelected.email">
-  <mat-list>
-    <mat-list-item *ngIf="userSelected.picture.large"
-      ><img [src]="userSelected.picture.large"
-    /></mat-list-item>
-    <mat-list-item
-      ><h1 *ngIf="userSelected.fullName">
-        {{ userSelected.fullName }}
-      </h1></mat-list-item
-    >
-    <mat-list-item
-      ><p *ngIf="userSelected.phone">
-        Telefone: {{ userSelected.phone }}
-      </p></mat-list-item
-    >
-    <mat-list-item
-      ><p *ngIf="userSelected.cell">
-        Celular: {{ userSelected.cell }}
-      </p></mat-list-item
-    >
-    <mat-list-item
-      ><p *ngIf="userSelected.dob">
-        Nascimento: {{ userSelected.dob.date | date }}
-        <span *ngIf="userSelected.dob.age"
-          >({{ userSelected.dob.age }} anos)</span
-        >
-      </p></mat-list-item
-    >
-    <mat-list-item><h3>Endereço</h3></mat-list-item>
-    <mat-list-item
-      >{{ userSelected?.location?.street?.name }},
-      {{ userSelected?.location?.street?.number }}</mat-list-item
-    >
-    <mat-list-item
-      >{{ userSelected?.location?.city }} -
-      {{ userSelected?.location?.state }}</mat-list-item
-    >
-    <mat-list-item
-      >{{ userSelected?.location?.postcode }} -
-      {{ userSelected?.location?.country }}</mat-list-item
-    >
-  </mat-list>
-</div> -->
-
 <mat-card class="user-card" *ngIf="userSelected.email">
   <mat-card-header>
     <div
       mat-card-avatar
       class="header-image"
-      [ngStyle]="{
-        background: 'url(' + userSelected.picture.thumbnail + ');'
-      }"
+      [style.background-image]="'url(' + userSelected.picture.thumbnail + ')'"
     ></div>
     <mat-card-title>{{ userSelected.fullName }}</mat-card-title>
     <mat-card-subtitle>{{ userSelected.email }}</mat-card-subtitle>
