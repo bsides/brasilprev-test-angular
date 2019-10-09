@@ -10,6 +10,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "deploy": "ng build --prod --output-path docs --base-href https://bsides.github.io/brasilprev-test-angular/",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
