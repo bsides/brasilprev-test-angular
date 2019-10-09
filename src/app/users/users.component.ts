@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
 import { MatSort } from '@angular/material/sort'
 import { MatTableDataSource } from '@angular/material/table'
+import { MatSortable } from '@angular/material/sort'
 import { User, UserDetail } from '../app.model'
 import { AppService } from '../app.service'
 
@@ -32,6 +33,7 @@ export class UsersComponent implements OnInit {
     this.appService.getUsers().subscribe(users => {
       this.users = users
       this.dataSource = new MatTableDataSource(users)
+      this.sort.sort({ id: 'name', start: 'asc' } as MatSortable)
       this.dataSource.sort = this.sort
     })
   }
