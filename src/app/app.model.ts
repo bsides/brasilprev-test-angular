@@ -41,7 +41,7 @@ class APIResultInfo {
 export class UserDetail {
   name: UserDetailName
   email: string
-  address: UserDetailAddress
+  location: UserDetailAddress
   phone: string
   cell: string
   picture: UserDetailPicture
