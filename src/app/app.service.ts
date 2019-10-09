@@ -16,10 +16,10 @@ export class AppService {
 
   constructor(private http: HttpClient) {}
 
-  getUsers(): Observable<User[]> {
+  getUsers(): Observable<User[] | any> {
     return this.http.get<APIResultUser>(this.apiUrl).pipe(
       map(json =>
-        json.results.map(user => ({
+        json.results.map((user: any) => ({
           ...user,
           name: user.name.first,
           fullName: user.name.first + ' ' + user.name.last
