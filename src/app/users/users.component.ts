@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
 import { MatSort } from '@angular/material/sort'
 import { MatTableDataSource } from '@angular/material/table'
-import { User } from '../app.model'
+import { User, UserDetail } from '../app.model'
 import { AppService } from '../app.service'
 
 @Component({
@@ -21,16 +21,22 @@ export class UsersComponent implements OnInit {
 
   ngOnInit() {
     this.getUsers()
+    this.getSelectedUser()
   }
 
-  getUsers(): void {
+  selectUser(userFromTable: UserDetail): void {
+    this.appService.selectUser(userFromTable)
+  }
+
+  private getUsers(): void {
     this.appService.getUsers().subscribe(users => {
       this.users = users
       this.dataSource = new MatTableDataSource(users)
       this.dataSource.sort = this.sort
     })
-    this.appService.selectedUser.subscribe(
-      message => (this.userSelected = message)
-    )
+  }
+
+  private getSelectedUser(): void {
+    this.appService.selectedUser.subscribe(user => (this.userSelected = user))
   }
 }

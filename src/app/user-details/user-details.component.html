@@ -1,1 +1,28 @@
-{{ message }} <button (click)="newMessage()">New Message</button>
+<div *ngIf="userSelected.email">
+  <img [src]="userSelected?.picture?.large" />
+  <h1 *ngIf="userSelected.fullName">{{ userSelected.fullName }}</h1>
+  <p *ngIf="userSelected.phone">Telefone: {{ userSelected.phone }}</p>
+  <p *ngIf="userSelected.cell">Celular: {{ userSelected.cell }}</p>
+  <p *ngIf="userSelected.dob">
+    Nascimento: {{ userSelected.dob.date | date }}
+    <span *ngIf="userSelected.dob.age">({{ userSelected.dob.age }} anos)</span>
+  </p>
+  <h3>Endereço</h3>
+  <ul>
+    <li>
+      {{ userSelected?.location?.street?.name }},
+      {{ userSelected?.location?.street?.number }}
+    </li>
+    <li>
+      {{ userSelected?.location?.city }} - {{ userSelected?.location?.state }}
+    </li>
+    <li>
+      {{ userSelected?.location?.postcode }} -
+      {{ userSelected?.location?.country }}
+    </li>
+  </ul>
+</div>
+
+<pre>
+  {{ userSelected | json }}
+</pre>
