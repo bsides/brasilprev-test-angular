@@ -14,11 +14,15 @@ Exibir uma lista de todos usuários com nome e email, ordenada por nome.
 
 Exibir o detalhe de usuário com foto, nome completo, endereço, telefone e data de nascimento.
 
-## Instalação && Resultado
+## Instalação
 
 1. Clone o projeto
 2. `yarn` ou `npm i`
 3. `ng serve` ou `yarn start` ou `npm start`
+
+## Resultado
+
+Veja no seu navegador em `http://localhost:4200` ou publicado aqui no github em https://bsides.github.io/brasilprev-test-angular/
 
 ## TODO
 
