@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
 import { HttpClientModule } from '@angular/common/http'
 
-import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { AppService } from './app.service'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
@@ -24,7 +23,6 @@ registerLocaleData(localePt)
   declarations: [AppComponent, UsersComponent, UserDetailsComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatButtonModule,
