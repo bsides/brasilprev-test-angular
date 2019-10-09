@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core'
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable, of, BehaviorSubject } from 'rxjs'
 import { catchError, map } from 'rxjs/operators'
-import { UserDetail, User, APIResult, APIResultUser } from './app.model'
+import { UserDetail, User, APIResultUser } from './app.model'
 
 // In real world, this would be separated for each entity
 // I'm keeping it tight though
