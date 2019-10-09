@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core'
 import { AppService } from './app.service'
-import { UserDetail } from './app.model'
 
 @Component({
   selector: 'app-root',
@@ -8,7 +7,7 @@ import { UserDetail } from './app.model'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  userSelected: UserDetail | {}
+  userSelected: any
 
   constructor(private data: AppService) {}
 

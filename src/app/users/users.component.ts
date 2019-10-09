@@ -12,7 +12,7 @@ import { AppService } from '../app.service'
 })
 export class UsersComponent implements OnInit {
   users: User[]
-  userSelected: User | {}
+  userSelected: any
   dataSource: MatTableDataSource<User>
   displayedColumns: string[] = ['name', 'email']
 

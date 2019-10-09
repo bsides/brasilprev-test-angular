@@ -8,7 +8,7 @@ import { UserDetail } from '../app.model'
   styleUrls: ['./user-details.component.scss']
 })
 export class UserDetailsComponent implements OnInit {
-  userSelected: UserDetail | {}
+  userSelected: any
 
   constructor(private data: AppService) {}
 
